@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Öğrenci Anasayfa</title>
+<link rel="stylesheet" type="text/css" href="ogrencisayfasi.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body onload="fetchData()"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="ogrenciAnasayfa.html">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Ogrencisayfasi.html">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Çıkış Yap</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <div style="width: 100%; position: relative; ">
+        <div >
+        <div >
+            <select class="form-select form-select-lg" style="width:250px;height:30px;" name="fakulte" id="titleList" onchange="fetchInstructors();">
+                <option selected="selected">Fakulte Seciniz</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-select form-select-lg" style="width:250px;height:30px;" name="akademisyen" id="instructorList" onchange="fetchOfficeHours();">
+                <option selected="selected">Egitmen Seciniz</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-select form-select-lg" style="width:250px;height:30px;" name="saat" id="officeHoursList">
+                <option selected="selected">Saat Seciniz</option>
+            </select>
+        </div>
+    </div>
+        <br>
+        <div>
+            <input class="btn btn-info" style="background:rgb(6, 245, 38)" type="button" value="Randevu Al" onclick="takeAppointment();">
+        </div>
+        <br><br>
+            <div style="position: fixed; left: 600px;  top: 50px; border: 3px solid #009dff;;width: 200px;">    
+             
+                <h3>Randevularim</h3>
+                <ul id="appointmentsList" >
+                <div>
+                    <p>Date</p>
+                    <p>Instructor</p>
+                </div>
+                <br>
+                <div>
+                    <p>Date</p>
+                    <p>Instructor</p>
+                </div>
+                <br>
+                <div>
+                    <p>Date</p>
+                    <p>Instructor</p>
+                </div>
+                </ul> 
+            </div>
+    </div>
+    <style>
+    th {
+	    background-color: lightblue;
+    }
+    td {
+        width: 100%;
+        text-align: justify;
+    }
+    td {
+        width: 100%;
+        text-align: justify;
+    }
+    </style>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src="ogrenciAnasayfa.js"></script>
+
+<html>

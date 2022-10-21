@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sistem Yöneticisi Anasayfa</title>
+<link rel="stylesheet" type="text/css" href="yonetici.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+<body> 
+    
+    <!-- <img src="ogrenci.gif" alt="Adı Soyadı" style="width:128px;height:128px;">
+    <form action="">
+        <input class="btn btn-info" type="button" value="Profil" onclick="window.location.href = `sistemYoneticisiProfil.html`">
+        <input class="btn btn-info" type="button" value="Anasayfa" onclick="window.location.href = `sistemYoneticisiAnasayfa.html`">
+        <input class="btn btn-info" type="button" value="Çıkış Yap" onclick="window.location.href = `index.html`"> > 
+    </form> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a>
+            <img src="ogrenci.gif" alt="Adı Soyadı" style="width:128px;height:128px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="sistemYoneticisiAnasayfa.html">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sistemYoneticisiProfil.html">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Çıkış Yap</a>
+              </li>
+          </ul>
+          <form style="padding-left: 600px;" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Arama..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Arama Yap</button>
+          </form>
+        </div>
+      </nav>
+
+    <div class="imageContainer">
+        <img src="header.jpeg" class="image">
+    </div>
+    
+    <div class="body2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                <div id="first">
+                    <div class="myform form ">
+                         <div class="logo mb-3">
+                             <div class="col-md-12 text-center">
+                                <h1>Sisteme Yeni Kullanıcı Ekle</h1>
+                             </div>
+                        </div>
+                       <div>
+                               <div class="form-group">
+                                  <label for="exampleInputEmail1">Ad</label>
+                                  <input type="text" id="name-sign-up" placeholder="Ad girin...">
+                               </div>
+                               <div class="form-group">
+                                  <label for="exampleInputEmail1">Soyad</label>
+                                  <input type="text" id="surname-sign-up" placeholder="Soyad girin...">
+                               </div>
+                               <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" id="email-sign-up" placeholder="Email girin...">
+                             </div>
+                             <div class="form-group">
+                                <label for="exampleInputEmail1">Sifre</label>
+                                <input type="password" id="password-sign-up" placeholder="Sifre girin...">
+                             </div>
+                               <div class="col-md-12 text-center ">
+                                  <button class="btn btn-block mybtn btn-primary tx-tfm" onclick="signup()">Kayıt Et  </button>
+                               </div>
+                            </div>
+                     
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div id="first">
+                        <div class="myform form ">
+                             <div class="logo mb-3">
+                                 <div class="col-md-12 text-center">
+                                    <h1>Sistemden Kullanıcı Sil</h1>
+                                 </div>
+                            </div>
+                           <div>
+                                   <div class="form-group">
+                                    <label for="exampleInputEmail1">Kullanıcı Email</label>
+                                    <input type="email" id="email-delete" placeholder="Kullanıcı email girin...">
+                                 </div>
+                                   <div class="col-md-12 text-center ">
+                                      <button class="btn btn-block mybtn btn-primary tx-tfm" onclick="deleteStudent()">Kullanıcı Sil  </button>
+                                   </div>
+                                </div>
+                         
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="delete">
+        <h3 id="form_header">Kullanıcı sistemYoneticisiProfil</h3>
+        <input type="email" id="email-delete" placeholder="Email">
+        <br><br>
+        <button class="btn btn-info" style="background-color: rgb(8, 237, 12);" onclick="deleteStudent()">Öğrenciyi Sil</button>
+    </div> -->
+
+    <!-- <div class="container p-3 my-3 bg-primary text-white "  style="width:20%;height:44% "  >
+    <div style="align-items: center">
+        <h3 id="form_header">Sisteme Yeni Kullanıcı Ekle</h3>
+        <input type="text" id="name-sign-up" placeholder="Ad">
+        <input type="text" id="surname-sign-up" placeholder="Soyad">
+        <br><br>
+        <input type="email" id="email-sign-up" placeholder="Email">
+        <input type="password" id="password-sign-up" placeholder="Şifre">
+        <br><br>
+        <button class="btn btn-info" style="background-color: rgb(8, 237, 12);" onclick="signup()">Kayıt Ol</button></div>
+    </div>   
+    
+        <div id="button_container">
+            
+     
+</div>      -->
+    <style>
+
+    </style>
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- Our script must be loaded after firebase references -->
+    <script src="sistemYoneticisiAnasayfa.js"></script>

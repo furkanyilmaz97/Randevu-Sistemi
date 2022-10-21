@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Akademisyen Profil</title>
+<link rel="stylesheet" type="text/css" href="ogrencisayfasi.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body> 
+    <body style="background-color:rgb(75, 75, 244);">
+    <img src="ogrenci.gif" alt="Adı Soyadı" style="width:128px;height:128px;">
+    <form action="">
+        <input class="btn btn-info" type="button" value="Profil" onclick="window.location.href = `akademisyenProfil.html`">
+        <input class="btn btn-info" type="button" value="Anasayfa" onclick="window.location.href = `akademisyenAnasayfa.html`">
+        <input class="btn btn-info" type="button" value="Çıkış Yap" onclick="window.location.href = `index.html`"> > 
+    </form>
+</body>
+<div style="width: 100%; position: relative;">
+    <strong>Programınızın Saatlerini Giriniz:</strong>
+    <div>
+        <input type="date" id="programSaati" name="programSaati">
+        <input type="button" value="Onayla">
+    </div>
+    <strong>Programınızın Saatlerini Güncelleyiniz:</strong>
+    <div>
+        <input type="date" id="programSaatiGuncelle" name="programSaatiGuncelle">
+        <input type="button" value="Güncelle">
+    </div>
+    <div title="Yaklaşan Randevularım" class="yaklasan-randevu">
+        <table style="width:100%; text-align: justify;">
+            <tr style="width:100%; text-align: center;">
+                <th>Yaklaşan Randevularım</th>
+            </tr>
+            <tr>
+                <td style="width:100%; text-align: justify;">Saat 13:00</td>
+            </tr>
+            <tr>
+                <td style="width:100%; text-align: justify;">2 gün sonra</td>
+            </tr>
+            <tr>
+                <td style="width:100%; text-align: justify;">3 gün sonra</td>
+            </tr>
+        </table>
+    </div>
+    <div title="Geçmiş Randevularım" class="gecmis-randevu">
+        <table style="width:100%; text-align: justify;">
+            <tr style="width:100%; text-align: center;">
+                <th>Geçmiş Randevularım</th>
+            </tr>
+            <tr>
+                <tr>
+                    <td style="width:100%; text-align: justify;">Öğrenci 1</td>
+                </tr>
+                <tr>
+                    <td style="width:100%; text-align: justify;">Öğrenci 2</td>
+                </tr>
+                <tr>
+                    <td style="width:100%; text-align: justify;">Öğrenci 3</td>
+                </tr>
+            </tr>
+        </table>  
+    </div>
+</div>
+<style>
+    td {
+        width: 100%;
+        text-align: justify;
+    }
+    td {
+        width: 100%;
+        text-align: justify;
+    }
+    tr:nth-child(even) {
+	background-color: #D6EEEE;
+  }
+</style>
+</body>

@@ -1,0 +1,38 @@
+.duz-cerceve{
+	border:3px solid black;
+	position: absolute;
+	left: 0; 
+	width:500px;
+	height:200px;
+	background-color: white;
+}
+
+.duz-cerceve2{
+	border:3px solid black;
+	position: absolute;
+	left: 0; 
+	width:1000px;
+	height:400px;
+	background-color: white;
+}
+
+.yaklasan-randevu{
+	border:3px solid black;
+	position: absolute;
+	display:table;
+	right: 500px;
+	width: 150px;
+	height:150px;
+	background-color: white;
+}
+
+.gecmis-randevu{
+	border:3px solid black;
+	position: absolute;
+	display:table;
+	right: 500px;
+	top: 200px;
+	width: 150px;
+	height:150px;
+	background-color: white;
+}
